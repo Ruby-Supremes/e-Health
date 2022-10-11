@@ -1,6 +1,4 @@
 class AppointmentsController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with:: render_unprocessable_entity_response
-
 
     def index
         render json: Appointment.all, status: :ok
@@ -35,9 +33,5 @@ class AppointmentsController < ApplicationController
 
     def appointment_params
         params.permit(:appointment_date, :doctor_id, :patient_id)
-    end
-
-    def render_unprocessable_entity_response(exception)
-        render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
     end
 end
