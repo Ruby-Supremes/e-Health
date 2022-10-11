@@ -16,7 +16,7 @@ body{
 /* 
 ############### -----------------J O B   S I D N E Y ----------############# */
 .WholeIntro{
-  padding: 2rem 6rem;
+  padding: 2rem 10rem;
   background-image: url('https://media.gettyimages.com/photos/closeup-of-young-woman-gazing-away-picture-id157443516?s=612x612');
   background-repeat: no-repeat;
   height: 100vh;
@@ -39,13 +39,23 @@ justify-content: space-between;
 }
 .navMenu>li{
   color: white;
-  /* background-color: blue; */
   margin: 0px 1rem;
   padding: 1rem 2rem; 
   list-style: none;
  text-align: center;
  height:fit-content;
  border-radius: 50px ;
- font-weight: bold;
- font-size: large;
+ font-weight:700;
+ font-size:1rem;
+}
+.active{
+  background-color: #1344FE;
+}
+.navInfo>button{
+  padding: 0.5rem 3rem;
+  border-radius: 15rem;
+  color: white;
+  background-color: transparent;
+  border: 1px solid ;
+
 }
