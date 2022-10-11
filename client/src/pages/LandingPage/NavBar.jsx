@@ -52,7 +52,8 @@ function NavBar() {
         }
       </ul>
       <div className='navInfo'>
-        <button>ENG.</button>
+        <button>ENG</button>
+        <button>(+254) 700-000-022</button>
       </div>
     </div>
   )

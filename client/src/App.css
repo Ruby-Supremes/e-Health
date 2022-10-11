@@ -39,7 +39,7 @@ justify-content: space-between;
 }
 .navMenu>li{
   color: white;
-  margin: 0px 1rem;
+  margin: 0px 0rem 0px 1rem;
   padding: 1rem 2rem; 
   list-style: none;
  text-align: center;
@@ -52,10 +52,15 @@ justify-content: space-between;
   background-color: #1344FE;
 }
 .navInfo>button{
-  padding: 0.5rem 3rem;
+  margin-left: 0.5rem;
+  padding: 0.8rem 3rem;
   border-radius: 15rem;
   color: white;
+  font-size: 1rem;
   background-color: transparent;
-  border: 1px solid ;
-
+  border: 1px solid rgb(164, 164, 164) ;
+}
+.navInfo>button:hover{
+  background-color: #1344FE;
+  border: 1px solid transparent;
 }
