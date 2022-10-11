@@ -1,8 +1,10 @@
 import "./App.css";
 import DoctorDashboard from "./pages/DoctorDashboard";
-
+import LandingPage from "./pages/LandingPage/LandingPage.jsx"; 
 function App() {
-  return <DoctorDashboard />;
+  return (
+    <LandingPage/>
+  )
 }
 
 export default App;

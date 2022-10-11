@@ -1,5 +1,6 @@
 body{
   font-family: 'Roboto', sans-serif;
+  padding: 2rem 6rem;
 }
 .navigationBar{
   height: 100vh;
@@ -8,4 +9,23 @@ body{
   background-color: #0E2759;
   font-size: 1.6rem;
   color: #fff;
+}
+
+
+
+/* 
+############### -----------------J O B   S I D N E Y ----------############# */
+.logo>img{
+  width: 100px;
+  height: 100px;
+}
+.Nav{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+  
+}
+.navMenu{
+  display: flex;
+
 }
