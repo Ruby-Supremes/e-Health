@@ -22,7 +22,7 @@ body{
   height: 100vh;
   background-size:cover;
   background-blend-mode:darken;
-  background-color: rgba(11, 11, 11,0.6);
+  background-color: rgba(11, 11, 11,0.5);
 }
 .logo>img{
   width: 100px;
@@ -63,4 +63,16 @@ justify-content: space-between;
 .navInfo>button:hover{
   background-color: #1344FE;
   border: 1px solid transparent;
+}
+.motto{
+  margin-top: 10rem;
+  
+}
+.motto>h1{
+  font-weight: 700;
+  line-height: 1.6;
+  word-spacing: 15px;
+  width: 40rem;
+  color: white;
+  opacity: 0.8;
 }
