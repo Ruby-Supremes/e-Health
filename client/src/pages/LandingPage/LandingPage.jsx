@@ -5,9 +5,9 @@ function LandingPage() {
 
 
   return (
-    <>
+    <div className='WholeIntro'>
     <NavBar/>
-    </>
+    </div>
   )
 }
 
