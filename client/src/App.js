@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import Navbar from "./components/Navbar";
 import Patients from "./pages/Patients";
 import Appointments from "./pages/Appointments";
@@ -9,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route exact path="/" element={<LandingPage />}></Route>
         <Route
           exact
           path="/dashboard"
