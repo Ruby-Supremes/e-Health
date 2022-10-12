@@ -24,60 +24,52 @@ Doctor.create!([
 ])
 
 puts "seeding patients"
-Patient.create!([
+User.create!([
 
-   { name: "Aaran Kibs",
+   { username: "Aaran Kibs",
      nationality: "Korean",
      date_of_birth: "21062000",
      address: "peetford",
      occupation: "teacher",
-     email: "#",
-     gender: "S",
-     allegies: "peanut",
+     allergies: "peanut",
      age: "22"
    },
 
-   { name: "Aaren Yeager",
+   { username: "Aaren Yeager",
      nationality: "Japanese",
      date_of_birth: "06021994",
      address: "langata",
      occupation: "engineer",
-     email: "#",
-     gender: "M",
-     allegies: "none",
+     allergies: "none",
      age: "28"
    },
 
-   { name: "Aaran Kibs",
+   { username: "Aaran Kibs",
      nationality: "Korean",
      date_of_birth: "21062000",
      address: "monrovia lane",
      occupation: "teacher",
-     email: "#",
-     gender: "S",
-     allegies: "peanut",
+     allergies: "peanut",
      age: "22"
    },
 
-   { name: "Hermadine Smith",
+   { username: "Hermadine Smith",
      nationality: "SouthAfrican",
      date_of_birth: "01172001",
      address: "utawala",
      occupation: "data scientist",
-     email: "#",
      gender: "F",
-     allegies: "kiwi",
+     allergies: "kiwi",
      age: "17"
    },
 
-   { name: "Melisa Lonte",
+   { username: "Melisa Lonte",
      nationality: "Kenyan",
      date_of_birth: "21062000",
      address: "jamhuri",
      occupation: "teacher",
-     email: "#",
      gender: "S",
-     allegies: "peanut",
+     allergies: "peanut",
      age: "22"
    }
 ])
