@@ -109,15 +109,19 @@ justify-content: space-between;
 
 }
 .btn2{
-  padding: 0.5rem 4rem;
+  padding: 0.5rem 5rem;
   border-radius: 15rem;
   background-color:#1344FE;
   color: white;
-  font-weight: 400;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   height: fit-content;
   border: 1px solid transparent;
-
+}
+.btn2:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #1344FE;
 }
 .appoint-btn>span{
   font-size: 2.8rem;
@@ -143,8 +147,38 @@ justify-content: space-between;
   color: black;
   font-family: Poppins;
   height: 900px;
+  padding: 1.5rem 0rem;;
 }
 .about-grid>div>img{
   width: 35rem;
   border-radius: 5px;
+  
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22rem;
+}
+.about h1{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.about p{
+  font-size: 1.2rem;
+  color: rgba(10, 10, 10,0.6);
+}
+.about h5{
+  font-weight: bold;
+}
+.radious{
+  border: 1px solid rgba(8, 8, 8,0.2);
+  padding: 1rem;
+  font-size: 5rem;
+  border-radius: 50%;
+}
+.about-grid>div:first-of-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
