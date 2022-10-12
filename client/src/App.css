@@ -157,7 +157,7 @@ justify-content: space-between;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 22rem;
+  width: 25rem;
   color: black;
  
 }
@@ -232,4 +232,38 @@ justify-content: space-between;
 }
 .grid-btn{
   margin-top: 1.7rem;
+}
+
+.image-grid>div>img{
+  max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.image-grid > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.image-grid{
+  margin-top: 6rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+}
+
+.image-grid .wide{
+  grid-row: span 2;
+}
+.image-grid .tall{
+  grid-column: span 2;
+}
+.image-grid .big{
+  grid-row: span 2;
+  grid-column: span 2;
 }
