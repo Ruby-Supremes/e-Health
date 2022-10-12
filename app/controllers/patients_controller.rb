@@ -23,6 +23,6 @@ end
     end
 
     def patient_params
-        params.permit(:username, :password, :age)
+        params.permit(:username, :age, :address, :date_of_birth, :nationality, :occupation :password)
     end
 end
