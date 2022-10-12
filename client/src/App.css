@@ -97,7 +97,7 @@ justify-content: space-between;
   color: white;
   opacity: 0.8;
 }
-.facts{
+.facts,.about-grid,.gallery{
   display: grid;
   color: white;
   margin-top: 8rem;
@@ -125,12 +125,28 @@ justify-content: space-between;
   background-color: white;
   color: black;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: rem;
   height: fit-content;
 
 }
+.btn2{
+  padding: 0.5rem 5rem;
+  border-radius: 15rem;
+  background-color:#1344FE;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  height: fit-content;
+  border: 1px solid transparent;
+}
+.btn2:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #1344FE;
+}
 .appoint-btn>span{
   font-size: 2.8rem;
+  font-family: Poppins;
 }
 .appoint-btn>.btn:hover{
   
@@ -147,4 +163,95 @@ justify-content: space-between;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
   border-bottom: 2px solid white;
+}
+.about-grid{
+  color: black;
+  font-family: Poppins;
+  height: 900px;
+  padding: 1.5rem 0rem;;
+}
+.about-grid>div>img{
+  width: 35rem;
+  border-radius: 5px;
+  
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22rem;
+  color: black;
+ 
+}
+.about h1{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.about-grid h3,.gallery>h3{
+  font-weight:bolder;
+  /* text-decoration: underline; */
+  color: black;
+}
+.about p{
+  font-size: 1.2rem;
+  color: rgba(10, 10, 10,0.6);
+}
+.about h5{
+  font-weight: bold;
+}
+.radious{
+  border: 1px solid rgba(8, 8, 8,0.2);
+  padding: 1rem;
+  font-size: 5rem;
+  border-radius: 50%;
+}
+.about-grid>div:first-of-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#hashTag{
+  padding: 0.5rem 3rem;
+  border-radius: 15rem;
+  background-color:white;
+  color: rgb(25, 25, 25,0.6);
+  font-weight: 600;
+  font-size: 1.1rem;
+  height: fit-content;
+  border: 1px solid rgba(12, 12, 12,0.3);
+  margin: 0.2rem 0.3rem;
+}
+.fa {
+  padding: 10px;
+  font-size: 50px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 1.2rem;
+  border-radius: 50px 50px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-whatsapp {
+  background: rgb(1,148,123);
+  color: white;
+}
+
+.fa-telegram {
+  background: rgb(57,166,220);
+  color: white;
+}
+.gallery{
+  border-top:1px solid rgba(82, 81, 81,0.2);
+  padding-top: 6rem;
+}
+.grid-btn{
+  margin-top: 1.7rem;
 }

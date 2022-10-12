@@ -1,19 +1,28 @@
 class PatientsController < ApplicationController
-<<<<<<< HEAD
-  def index
-    render json: Patients.all, status: :ok
-  end
-=======
-    
+    before_action :authorize, only: [:show]
+
     def create
         patient = Patient.create!(patient_params)
-        render json: patient, status: :created
+        if patient.valid?
+            session[:patient_id] = patient.id
+            render json: patient, status: :created
+        else
+            render json: { errors: patient.errors.full_messages }, status: :unprocessable_entity
+    end
+end
+
+    def show
+        patient = Patient.find_by(id: session[:patient_id])
+        render json :patient
     end
 
     private
 
+    def authorize 
+        render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :patient_id
+    end
+
     def patient_params
         params.permit(:username, :password, :age)
     end
->>>>>>> 0a6d96889df738ca241b18b51fe34f2d41727765
 end

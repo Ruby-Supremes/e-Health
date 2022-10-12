@@ -1,8 +1,4 @@
 class DoctorsController < ApplicationController
-<<<<<<< HEAD
-  def index
-        render json: Doctor.all, status: :ok
-=======
     rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found_response
 
     def index
@@ -36,6 +32,5 @@ class DoctorsController < ApplicationController
 
   def render_record_not_found_response
     render json: { error: "Doctor not found" }, status: :not_found
->>>>>>> 0a6d96889df738ca241b18b51fe34f2d41727765
   end
 end
