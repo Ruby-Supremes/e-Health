@@ -75,7 +75,7 @@ justify-content: space-between;
   color: white;
   opacity: 0.8;
 }
-.facts,.about-grid,.gallery{
+.facts,.about-grid,.gallery,.services{
   display: grid;
   color: white;
   margin-top: 8rem;
@@ -161,11 +161,12 @@ justify-content: space-between;
   color: black;
  
 }
-.about h1{
+.about h1,.services h1{
   font-size: 3rem;
   font-weight: bolder;
+  color: black;
 }
-.about-grid h3,.gallery>h3{
+.about-grid h3,.gallery>h3,.services h3{
   font-weight:bolder;
   /* text-decoration: underline; */
   color: black;
@@ -267,3 +268,124 @@ justify-content: space-between;
   grid-row: span 2;
   grid-column: span 2;
 }
+
+
+/* JOB SIDNEY LOGIN FORMS */
+.image2{
+  background-image: url("https://healthsciences.uonbi.ac.ke/sites/default/files/2021-10/hospital-ward.jpg");
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+
+}
+
+.overlay{
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  
+}
+.heading{
+  text-align: center;
+  font-weight: bold;
+  color: #ffff;
+  font-size: 50px;
+
+  
+}
+form>div{
+  display: flex;
+  flex-direction: row;
+}
+
+.all{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 400px;
+  height: 50%;
+}
+form{
+  display: grid;
+  gap: 2rem;
+  width: 400px;
+}
+label>.fa{
+  font-size: 25px;
+
+}
+input{
+  width: 100%;
+  border-radius: 6px;
+  padding: 1rem;
+  font-weight: 500;
+  font-size:larger;
+  border: none;
+}
+input:focus{
+  border: 4px solid #ed5625ff;
+  background-color:rgb(244, 210, 198) ;
+}
+#logIn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #ed5625ff;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  
+}
+#password{
+  text-align: center;
+  color: #ffff;
+  font-size: x-large;
+  text-decoration: underline;
+
+}
+
+.horizontal{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #ffff;
+}
+hr{
+  width: 150px;
+}
+h3{
+  padding: 0 7px 0 7px;
+}
+
+#account{
+  text-align: center;
+  color: #ffff;
+  font-size: x-large;
+
+}
+#sign{
+  color:#1c689b;
+}
+
+
+
+
