@@ -18,7 +18,10 @@ const Patients = ({ column }) => {
 
   return (
     <div className={`${column}`}>
-      <Card name={`${patients[0].name}`} occupation={`${patients[0].occupation}`} />
+      <Card
+        name={`${patients[0].name}`}
+        occupation={`${patients[0].occupation}`}
+      />
       <table
         className="table table-striped"
         style={{
@@ -53,23 +56,10 @@ const Patients = ({ column }) => {
               <td>{patient.occupation}</td>
               <td>{patient.gender}</td>
               <td>
-                <Button text="View Details" style="btn btn-primary" />
+                <Button text="View Details" design="btn btn-primary" />
               </td>
             </tr>
           ))}
-          {/* <tr>
-            <td>1</td>
-            <td>Steven Otieno</td>
-            <td>22</td>
-            <td>12th December 2000</td>
-            <td>steveotiang'a</td>
-            <td>Tanzania</td>
-            <td>Software Developer</td>
-            <td>Male</td>
-            <td>
-              <Button style="btn btn-primary" text="View Details" />
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </div>
