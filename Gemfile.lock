@@ -80,6 +80,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.2)
       reline (>= 0.3.0)
+    language_server-protocol (3.17.0.1)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -100,6 +101,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
+    prettier_print (0.1.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -135,7 +137,14 @@ GEM
     rake (13.0.6)
     reline (0.3.1)
       io-console (~> 0.5)
+    ruby-lsp (0.3.3)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 3.4)
+    sorbet-runtime (0.5.10482)
     sqlite3 (1.5.2-x86_64-linux)
+    syntax_tree (3.6.2)
+      prettier_print
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
@@ -152,6 +161,7 @@ DEPENDENCIES
   debug
   puma (~> 5.0)
   rails (~> 7.0.4)
+  ruby-lsp (~> 0.3.3)
   sqlite3 (~> 1.4)
   tzinfo-data
 
@@ -159,4 +169,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.23
+   2.3.22

@@ -1,11 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Patients from "./pages/Patients";
 import Appointments from "./pages/Appointments";
 import Approvals from "./pages/Approvals";
-// import Appointments from "./pages/Appointments";
 
 function App() {
   return (
@@ -48,7 +46,6 @@ function App() {
             </div>
           }
         />
-        
       </Routes>
     </BrowserRouter>
   );
