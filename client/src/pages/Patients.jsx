@@ -1,27 +1,24 @@
-import Card from "../components/Card";
+// import Card from "../components/Card";
 
 import Button from "../components/Button";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Patients = ({ column }) => {
-  const patients = [
-    {
-      id: 1,
-      name: "Steven Otieno",
-      age: "22",
-      DOB: "12th Dec 2000",
-      email: "steveotianga8991@gmail.com",
-      nationality: "Kenyan",
-      occupation: "Software Developer",
-      gender: "Male",
-    },
-  ];
+  const [patients, setPatients] = useState([]);
+
+  useEffect(() => {
+    fetch("https://granite-aluminum-grasshopper.glitch.me/patients")
+      .then((response) => response.json())
+      .then((data) => setPatients(data));
+  }, [patients]);
 
   return (
     <div className={`${column}`}>
-      <Card
+      {/* <Card
         name={`${patients[0].name}`}
         occupation={`${patients[0].occupation}`}
-      />
+      /> */}
       <table
         className="table table-striped"
         style={{
@@ -35,12 +32,11 @@ const Patients = ({ column }) => {
           <tr>
             <th>NO:</th>
             <th>Name</th>
-            <th>Age</th>
+            <th>Address</th>
             <th>DOB</th>
-            <th>Email</th>
             <th>Nationality</th>
             <th>Occupation</th>
-            <th>Gender</th>
+            <th>Allergies</th>
             <th></th>
           </tr>
         </thead>
@@ -49,12 +45,11 @@ const Patients = ({ column }) => {
             <tr key={patient.id}>
               <td>{patient.id}</td>
               <td>{patient.name}</td>
-              <td>{patient.age}</td>
+              <td>{patient.address}</td>
               <td>{patient.DOB}</td>
-              <td>{patient.email}</td>
               <td>{patient.nationality}</td>
               <td>{patient.occupation}</td>
-              <td>{patient.gender}</td>
+              <td>{patient.allergies}</td>
               <td>
                 <Button word="View Details" classN="btn btn-primary" />
               </td>
