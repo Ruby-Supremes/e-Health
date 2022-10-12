@@ -1,9 +1,11 @@
 import React from 'react'
 import ButtonHashTag from '../../components/ButtonHashTag'
+import ImageGrid from '../../components/ImageGrid'
 
 function Gallery() {
   return (
-    <div className='gallery'>
+    <div>
+        <div className='gallery'>
       <h3>Gallery</h3>
       <div className='about'>
         <h1>Check out our clinic great gallery</h1>
@@ -20,6 +22,18 @@ function Gallery() {
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-whatsapp"></a>
       </div>
+    </div>
+    <ImageGrid/>
+    <div>
+        <div className="services">
+            <h3>Services</h3>
+            <h1>Excelent services of our clinic</h1>
+
+        </div>
+        <ul>
+            
+        </ul>
+    </div>
     </div>
   )
 }
