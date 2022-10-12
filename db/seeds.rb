@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Seeding doctors"
+Doctors.create!([
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+    {name: "", specialization: "", experience: " Years", image: "" },
+])
+
+
