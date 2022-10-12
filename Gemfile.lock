@@ -72,10 +72,14 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
 <<<<<<< HEAD
+    bcrypt (3.1.18)
+=======
+<<<<<<< HEAD
     bcrypt (3.1.16)
 =======
     bcrypt (3.1.18)
 >>>>>>> 744ebfc708fe76bf6703d14dbbad08fa2d3295d4
+>>>>>>> 2a9d6bc5a1804f9be93a79a4f3a1d59cc3eb122e
     builder (3.2.4)
     case_transform (0.2)
       activesupport
@@ -172,11 +176,16 @@ PLATFORMS
 
 DEPENDENCIES
 <<<<<<< HEAD
+  active_model_serializers (~> 0.10.12)
+  bcrypt (~> 3.1.7)
+=======
+<<<<<<< HEAD
   bcrypt
 =======
   active_model_serializers (~> 0.10.12)
   bcrypt (~> 3.1.7)
 >>>>>>> 744ebfc708fe76bf6703d14dbbad08fa2d3295d4
+>>>>>>> 2a9d6bc5a1804f9be93a79a4f3a1d59cc3eb122e
   debug
   puma (~> 5.0)
   rails (~> 7.0.4)

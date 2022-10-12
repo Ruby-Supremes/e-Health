@@ -10,19 +10,18 @@ puts "seeding"
 
 puts "Seeding doctors"
 Doctor.create!([
-    {name: "John Brown", specialization: "cardiologist", experience: " Years", image: "#" },
-    {name: "Liza Addison", specialization: "neurose sergeon", experience: " Years", image: "#" },
-    {name: "Mark Evanz", specialization: "dermatologist", experience: " Years", image: "#" },
-    {name: "Daniella Martins", specialization: "orthopedic sergeon", experience: " Years", image: "#" },
-    {name: "Rosey Jean", specialization: "gynaecologist", experience: " Years", image: "#" },
-    {name: "Jessica Eve", specialization: "paedetrician", experience: " Years", image: "#" },
-    {name: "Racheal Ross", specialization: "opthamalic sergeon", experience: " Years", image: "#" },
-    {name: "Zayn Lion", specialization: "andrologist", experience: " Years", image: "#" },
-    {name: "Mary Linda", specialization: "dentist", experience: " Years", image: "#" },
-    {name: "Daniel Jones", specialization: "oncologist", experience: " Years", image: "#" },
-    {name: "Abraham Daves", specialization: "otolaryngology", experience: " Years", image: "#" },
+  {name: "John Brown", specialization: "cardiologist", experience: " Years", image: "#" },
+  {name: "Liza Addison", specialization: "neurose sergeon", experience: " Years", image: "#" },
+  {name: "Mark Evanz", specialization: "dermatologist", experience: " Years", image: "#" },
+  {name: "Daniella Martins", specialization: "orthopedic sergeon", experience: " Years", image: "#" },
+  {name: "Rosey Jean", specialization: "gynaecologist", experience: " Years", image: "#" },
+  {name: "Jessica Eve", specialization: "paedetrician", experience: " Years", image: "#" },
+  {name: "Racheal Ross", specialization: "opthamalic sergeon", experience: " Years", image: "#" },
+  {name: "Zayn Lion", specialization: "andrologist", experience: " Years", image: "#" },
+  {name: "Mary Linda", specialization: "dentist", experience: " Years", image: "#" },
+  {name: "Daniel Jones", specialization: "oncologist", experience: " Years", image: "#" },
+  {name: "Abraham Daves", specialization: "otolaryngology", experience: " Years", image: "#" },
 ])
-
 puts "seeding patients"
 Patient.create!([
 
