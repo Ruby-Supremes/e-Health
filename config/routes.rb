@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :appointments, only: [:index, :show, :create, :update, :destroy]
-  resources :patients, only: [:create]
+  resources :users, only: [:create]
   resources :doctors, only: [:index, :show, :create, :destory]
   
   post '/login', to: 'sessions#create'
