@@ -21,7 +21,7 @@ function WholeIntro() {
             <h3>Take the sicount for the visit of a doctor</h3>
             <div className="appoint-btn">
               <span>20%</span>
-              <button>Make an appointment</button>
+              <button className='btn'>Make an appointment</button>
             </div>
           </div>
         </div>
