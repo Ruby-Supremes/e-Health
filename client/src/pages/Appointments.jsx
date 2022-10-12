@@ -51,9 +51,9 @@ const Appointments = ({ column }) => {
               <td>{patient.occupation}</td>
               <td>{patient.gender}</td>
               <td>
-                <Button text="Approve" design="btn btn-primary" />
+                <Button word="Approve" classN="btn btn-primary" />
               </td>
-              <td><Button text="Deny" design="btn btn-danger" /></td>
+              <td><Button word="Deny" classN="btn btn-danger" /></td>
             </tr>
           ))}
         </tbody>

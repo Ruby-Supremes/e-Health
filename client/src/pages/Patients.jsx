@@ -56,7 +56,7 @@ const Patients = ({ column }) => {
               <td>{patient.occupation}</td>
               <td>{patient.gender}</td>
               <td>
-                <Button text="View Details" design="btn btn-primary" />
+                <Button word="View Details" classN="btn btn-primary" />
               </td>
             </tr>
           ))}

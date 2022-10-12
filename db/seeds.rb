@@ -10,7 +10,7 @@ puts "seeding"
 =======
 
 puts "Seeding doctors"
-Doctors.create!([
+Doctor.create!([
     {name: "", specialization: "", experience: " Years", image: "" },
     {name: "", specialization: "", experience: " Years", image: "" },
     {name: "", specialization: "", experience: " Years", image: "" },
