@@ -40,7 +40,7 @@ li {
   height: 100vh;
   background-size:cover;
   background-blend-mode:darken;
-  background-color: rgba(11, 11, 11,0.5);
+  background-color: rgba(11, 11, 11,0.3);
 }
 .logo>img{
   width: 100px;
@@ -76,7 +76,7 @@ justify-content: space-between;
   color: white;
   font-size: 1rem;
   background-color: transparent;
-  border: 1px solid rgb(164, 164, 164) ;
+  border: 1px solid rgb(241, 241, 241) ;
 }
 .navInfo>button:hover{
   background-color: #1344FE;
@@ -93,4 +93,55 @@ justify-content: space-between;
   width: 40rem;
   color: white;
   opacity: 0.8;
+}
+.facts{
+  display: grid;
+  color: white;
+  margin-top: 8rem;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+}
+
+.appointment{
+  padding: 2rem;
+  background-color: #1344FE;
+  height: 300px;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.appoint-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.appoint-btn>.btn{
+  padding: 0.8rem 3rem;
+  border-radius: 15rem;
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+  height: fit-content;
+
+}
+.appoint-btn>span{
+  font-size: 2.8rem;
+}
+.appoint-btn>.btn:hover{
+  
+  color: white;
+  border: 1px solid white;
+}
+.facts>.two-col>p{
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  font-size: 1.2rem;
+}
+.facts>.two-col>p:first-child{
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid white;
 }
