@@ -76,7 +76,7 @@ justify-content: space-between;
   color: white;
   opacity: 0.8;
 }
-.facts{
+.facts,.about-grid{
   display: grid;
   color: white;
   margin-top: 8rem;
@@ -104,12 +104,24 @@ justify-content: space-between;
   background-color: white;
   color: black;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: rem;
   height: fit-content;
+
+}
+.btn2{
+  padding: 0.5rem 4rem;
+  border-radius: 15rem;
+  background-color:#1344FE;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+  height: fit-content;
+  border: 1px solid transparent;
 
 }
 .appoint-btn>span{
   font-size: 2.8rem;
+  font-family: Poppins;
 }
 .appoint-btn>.btn:hover{
   
@@ -126,4 +138,13 @@ justify-content: space-between;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
   border-bottom: 2px solid white;
+}
+.about-grid{
+  color: black;
+  font-family: Poppins;
+  height: 900px;
+}
+.about-grid>div>img{
+  width: 35rem;
+  border-radius: 5px;
 }
