@@ -56,7 +56,7 @@ function handleSubmit(event){
        
         <form id='log' onSubmit={handleSubmit}>
         
-        <h2 className="heading">Villa</h2>
+        <h2 className="heading">Medwin Care</h2>
         
             <input type="email" name="email" id="username-field" className="login-button" placeholder="Email" onChange={handleChange} required></input>
             <input type="password" name="password" id="password-field" className="login-button" placeholder="Password" onChange={handleChange} required></input>
