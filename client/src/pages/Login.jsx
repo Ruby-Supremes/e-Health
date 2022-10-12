@@ -63,7 +63,7 @@ function handleSubmit(event){
         
         <button type='submit' classNameName='log' id='logIn'>{action?'Login' :'Delete'}</button>
 
-        <h3 id="password"><a href ="##">forgot password?</a></h3>
+        <Link to="##"><h3 id="password">forgot password?</h3></Link>
         <div className="horizontal">
             <div className="hor"><hr/>
             </div>
