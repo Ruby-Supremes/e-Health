@@ -28,6 +28,9 @@ li {
 .border1{
   border: 2px solid red;
 }
+.cardTitle{
+  font-family: 'Anton', sans-serif;
+}
 
 
 
