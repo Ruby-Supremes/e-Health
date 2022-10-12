@@ -1,11 +1,30 @@
-body{
+body {
   font-family: 'Roboto', sans-serif;
 }
-.navigationBar{
+
+.navigationBar {
   height: 100vh;
 }
-.leftSideNavigation{
-  background-color: #0E2759;
-  font-size: 1.6rem;
+
+.leftSideNavigation {
+  background-color: #010D26;
+  font-size: 1.2rem;
   color: #fff;
+  height: 100vh;
+}
+
+li {
+  margin-bottom: 1.25rem;
+}
+
+.topNavbar {
+  background-color: #0E2759;
+  height: 8vh;
+}
+
+.searchInput {
+  border-radius: 20px;
+}
+.border1{
+  border: 2px solid red;
 }
