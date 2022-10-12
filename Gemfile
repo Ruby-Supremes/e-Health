@@ -27,11 +27,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-<<<<<<< HEAD
 
 
 gem "ruby-lsp", "~> 0.3.3", :group => :development
-=======
-gem 'faker', '~> 2.17'
-gem 'active_model_serializers'
->>>>>>> 0a6d96889df738ca241b18b51fe34f2d41727765
