@@ -8,7 +8,6 @@
 puts "seeding"
 
 puts "Seeding doctors"
-puts "Seeding doctors"
 Doctor.create!([
   { name: "John Brown", specialization: "cardiologist", experience: "5 Years", image: "https://image.freepik.com/free-vector/smiley-doctor-with-clipboard-stethoscope_23-2147657761.jpg" },
   { name: "Liza Addison", specialization: "neurose sergeon", experience: "6 Years", image: "https://image.freepik.com/free-vector/therapist-physician-doctor_82574-5381.jpg" },
