@@ -1,19 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import Button from "../components/Button";
 
 const Appointments = ({ column }) => {
-  const patients = [
-    {
-      id: 1,
-      name: "Steven Otieno",
-      age: "22",
-      DOB: "12th Dec 2000",
-      email: "steveotianga8991@gmail.com",
-      nationality: "Kenyan",
-      occupation: "Software Developer",
-      gender: "Male",
-    },
-  ];
+  const [patients, setPatients] = useState([]);
+
+  useEffect(() => {
+    fetch("https://granite-aluminum-grasshopper.glitch.me/patients")
+      .then((response) => response.json())
+      .then((data) => setPatients(data));
+  }, [patients]);
+
   return (
     <div className={`${column}`}>
       <table
@@ -21,7 +19,7 @@ const Appointments = ({ column }) => {
         style={{
           fontSize: "1rem",
           width: "100%",
-          margin: "auto",
+          // margin: "auto",
           backgroundColor: "#809BA6",
         }}
       >
@@ -53,7 +51,9 @@ const Appointments = ({ column }) => {
               <td>
                 <Button word="Approve" classN="btn btn-primary" />
               </td>
-              <td><Button word="Deny" classN="btn btn-danger" /></td>
+              <td>
+                <Button word="Deny" classN="btn btn-danger" />
+              </td>
             </tr>
           ))}
         </tbody>
