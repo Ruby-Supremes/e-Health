@@ -65,8 +65,7 @@ User.create!([
    gender: "Female",
    address: "jamhuri",
    occupation: "teacher",
-   allergies: "peanut", 
-   
+   allergies: "peanut",
    age: "22",
    password: "12345678" }, 
 ])
