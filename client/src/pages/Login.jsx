@@ -25,9 +25,9 @@ function handleChange(event) {
 function handleAction(){
   setAction(!action)
 }
-function handleDeleteClick({id}) {
+// function handleDeleteClick({id}) {
 
-}
+// }
 
 function handleSubmit(event){
     const item=data.find(item=>item.email===formData.email)
@@ -71,8 +71,8 @@ function handleSubmit(event){
             <div className="hor"><hr/>
             </div>
         </div>
-        <h3 id="account">Don't have an account? <Link to="/signUp" id="sign">Sign up</Link></h3>
-        <h3 id="account">Do you want to {action ?'Delete':'Login'} Account? <Link to="" id="sign" onClick={handleAction}>{action?'Delete':'Login'}</Link></h3>
+        <h3 id="account">Don't have an account? <Link to="#" id="sign">Sign up</Link></h3>
+        <h3 id="account">Do you want to {action ?'Delete':'Login'} Account? <Link to="#" id="sign" onClick={handleAction}>{action?'Delete':'Login'}</Link></h3>
       </form>
     </div>
   )
