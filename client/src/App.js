@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Patients from "./pages/Patients";
 import Appointments from "./pages/Appointments";
 import Approvals from "./pages/Approvals";
+import PatientAppointment from "./pages/PatientAppointment"
 
 function App() {
   return (
@@ -48,9 +49,11 @@ function App() {
             </div>
           }
         />
+        <Route path="/booking" element={<PatientAppointment />} />
       </Routes>
     </BrowserRouter>
   );
+
 }
 
 export default App;
