@@ -1,20 +1,15 @@
 import "./App.css";
-<<<<<<< HEAD
-=======
-import Form from './pages/Form'
-import SignUp from "./pages/SignUp";
->>>>>>> 1e359ae5a6afbad1b698e8ea6c27a552d4ed4e8d
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import Navbar from "./components/Navbar";
 import Patients from "./pages/Patients";
 import Appointments from "./pages/Appointments";
 import Approvals from "./pages/Approvals";
+import PatientAppointment from "./pages/PatientAppointment"
 
 function App() {
   return (
     <BrowserRouter>
-<<<<<<< HEAD
       <Routes>
         <Route exact path="/" element={<LandingPage />}></Route>
         <Route
@@ -58,11 +53,7 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-=======
-    <Form dataa={<SignUp/>}/>
-        </BrowserRouter>
-  )
->>>>>>> 1e359ae5a6afbad1b698e8ea6c27a552d4ed4e8d
+
 }
 
 export default App;

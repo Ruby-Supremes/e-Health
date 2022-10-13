@@ -17,12 +17,12 @@ function Gallery() {
             <ButtonHashTag word={'Trust'}/>
         </div>
       </div>
-      <div>
-      <a href="#" class="fa fa-telegram"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-whatsapp"></a>
-      </div>
+      {/* <div>
+      <a href="sample" className="fa fa-telegram"></a>
+        <a href="sample"  className="fa fa-twitter"></a>
+        <a href="sample"  className="fa fa-facebook"></a>
+        <a href="sample"  className="fa fa-whatsapp"></a>
+      </div> */}
     </div>
     <ImageGrid/>
     <div>
@@ -33,8 +33,8 @@ function Gallery() {
 
         </div>
         <ul className='service-ul'>
-            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward className='radious2'/></li>
-            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward className='radious2'/></li>
+            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward classNameName='radious2'/></li>
+            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward classNameName='radious2'/></li>
         </ul>
     </div>
     </div>
