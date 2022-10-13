@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonHashTag from '../../components/ButtonHashTag'
 import ImageGrid from '../../components/ImageGrid'
+import * as Io from "react-icons/io";
 
 function Gallery() {
   return (
@@ -28,10 +29,12 @@ function Gallery() {
         <div className="services">
             <h3>Services</h3>
             <h1>Excelent services of our clinic</h1>
+            
 
         </div>
-        <ul>
-            
+        <ul className='service-ul'>
+            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward className='radious2'/></li>
+            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward className='radious2'/></li>
         </ul>
     </div>
     </div>
