@@ -4,6 +4,21 @@ import ImageGrid from '../../components/ImageGrid'
 import * as Io from "react-icons/io";
 
 function Gallery() {
+  const serv=[
+    "Diagnostic examination with consultation of an ophthalmologist",
+    "Children Care",
+    "Consultation with a medical specialist",
+    "Laser treatments for sleeping sickness and glaucoma",
+    "Laser vision correction",
+    "Treatment of cataract",
+    "SUrgical treatment of glaucoma",
+    "Surgical treatment of high levels of refractive anomalies",
+    "Treatment for keratoconus",
+    "Hardware treatment(myopia,amblyopia...)",
+  ]
+  function data(){
+    
+  }
   return (
     <div>
         <div className='gallery'>
@@ -17,12 +32,12 @@ function Gallery() {
             <ButtonHashTag word={'Trust'}/>
         </div>
       </div>
-      {/* <div>
+      <div>
       <a href="sample" className="fa fa-telegram"></a>
         <a href="sample"  className="fa fa-twitter"></a>
         <a href="sample"  className="fa fa-facebook"></a>
         <a href="sample"  className="fa fa-whatsapp"></a>
-      </div> */}
+      </div>
     </div>
     <ImageGrid/>
     <div>
@@ -33,8 +48,10 @@ function Gallery() {
 
         </div>
         <ul className='service-ul'>
-            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward classNameName='radious2'/></li>
-            <li><span>Diagnostic examination with consultation of an ophthalmologist</span> <Io.IoIosArrowRoundForward classNameName='radious2'/></li>
+          
+          {
+            serv.map(item=>(<li><span>{item}</span> <Io.IoIosArrowRoundForward classNameName='radious2'/></li>))
+          }
         </ul>
     </div>
     </div>
