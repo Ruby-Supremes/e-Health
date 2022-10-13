@@ -1,73 +1,133 @@
-body{
+body {
   font-family: 'Roboto', sans-serif;
 }
-.navigationBar{
+
+.navigationBar {
   height: 100vh;
 }
-.leftSideNavigation{
-  background-color: #0E2759;
-  font-size: 1.6rem;
+
+.leftSideNavigation {
+  background-color: #010D26;
+  font-size: 1.2rem;
   color: #fff;
+  height: 100vh;
+}
+
+form>* {
+  margin-bottom: 1.3rem;
+}
+
+form {
+  padding: 1.2rem;
+}
+
+
+.patientForm {
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 0px 4px #0455BF;
+  -moz-box-shadow: 0px 0px 4px #0455BF;
+  box-shadow: 0px 0px 4px #0455BF;
+  background-color: #DDDDDD;
+  width: 70%;
+  margin: auto;
+}
+
+.fillingForm {
+  height: 100vh;
+  background: rgb(0, 212, 255);
+  background: radial-gradient(circle, rgba(0, 212, 255, 1) 0%, rgba(39, 106, 193, 1) 100%, rgba(2, 0, 36, 1) 100%);
+}
+
+li {
+  margin-bottom: 1.25rem;
+}
+
+.border1 {
+  border: 2px solid red;
+}
+
+.topNavbar {
+  background-color: #0E2759;
+  height: 8vh;
+}
+
+.searchInput {
+  border-radius: 20px;
+}
+
+
+
+.cardTitle {
+  font-family: 'Anton', sans-serif;
 }
 
 
 
 /* 
 ############### -----------------J O B   S I D N E Y ----------############# */
-.WholeIntro{
+.WholeIntro {
   padding: 2rem 10rem;
   background-image: url('https://media.gettyimages.com/photos/closeup-of-young-woman-gazing-away-picture-id157443516?s=612x612');
   background-repeat: no-repeat;
   height: 100vh;
-  background-size:cover;
-  background-blend-mode:darken;
-  background-color: rgba(11, 11, 11,0.3);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(11, 11, 11, 0.3);
 }
-.logo>img{
+
+.logo>img {
   width: 100px;
   height: 100px;
 }
-.Nav{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-  
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
-.navMenu{
+
+.navMenu {
   display: inherit;
 }
-.navMenu>li{
+
+.navMenu>li {
   color: white;
   margin: 0px 0rem 0px 1rem;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   list-style: none;
- text-align: center;
- height:fit-content;
- border-radius: 50px ;
- font-weight:700;
- font-size:1rem;
+  text-align: center;
+  height: fit-content;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
 }
-.active{
+
+.active {
   background-color: #1344FE;
 }
-.navInfo>button{
+
+.navInfo>button {
   margin-left: 0.5rem;
   padding: 0.8rem 3rem;
   border-radius: 15rem;
   color: white;
   font-size: 1rem;
   background-color: transparent;
-  border: 1px solid rgb(241, 241, 241) ;
+  border: 1px solid rgb(241, 241, 241);
 }
-.navInfo>button:hover{
+
+.navInfo>button:hover {
   background-color: #1344FE;
   border: 1px solid transparent;
 }
-.motto{
+
+.motto {
   margin-top: 10rem;
-  
+
 }
-.motto>h1{
+
+.motto>h1 {
   font-weight: 700;
   line-height: 1.6;
   word-spacing: 15px;
@@ -75,7 +135,14 @@ justify-content: space-between;
   color: white;
   opacity: 0.8;
 }
+<<<<<<< HEAD
+
+.facts,
+.about-grid,
+.gallery {
+=======
 .facts,.about-grid,.gallery,.services{
+>>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
   display: grid;
   color: white;
   margin-top: 8rem;
@@ -83,7 +150,7 @@ justify-content: space-between;
   justify-content: space-between;
 }
 
-.appointment{
+.appointment {
   padding: 2rem;
   background-color: #1344FE;
   height: 300px;
@@ -92,12 +159,14 @@ justify-content: space-between;
   flex-direction: column;
   justify-content: space-between;
 }
-.appoint-btn{
+
+.appoint-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.appoint-btn>.btn{
+
+.appoint-btn>.btn {
   padding: 0.8rem 3rem;
   border-radius: 15rem;
   background-color: white;
@@ -107,99 +176,127 @@ justify-content: space-between;
   height: fit-content;
 
 }
-.btn2{
+
+.btn2 {
   padding: 0.5rem 5rem;
   border-radius: 15rem;
-  background-color:#1344FE;
+  background-color: #1344FE;
   color: white;
   font-weight: 600;
   font-size: 1.1rem;
   height: fit-content;
   border: 1px solid transparent;
 }
-.btn2:hover{
+
+.btn2:hover {
   background-color: white;
   color: black;
   border: 2px solid #1344FE;
 }
-.appoint-btn>span{
+
+.appoint-btn>span {
   font-size: 2.8rem;
   font-family: Poppins;
 }
-.appoint-btn>.btn:hover{
-  
+
+.appoint-btn>.btn:hover {
+
   color: white;
   border: 1px solid white;
 }
-.facts>.two-col>p{
+
+.facts>.two-col>p {
   display: flex;
   flex-direction: column;
   width: 19rem;
   font-size: 1.2rem;
 }
-.facts>.two-col>p:first-child{
+
+.facts>.two-col>p:first-child {
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
   border-bottom: 2px solid white;
 }
-.about-grid{
+
+.about-grid {
   color: black;
   font-family: Poppins;
   height: 900px;
-  padding: 1.5rem 0rem;;
+  padding: 1.5rem 0rem;
+  ;
 }
-.about-grid>div>img{
+
+.about-grid>div>img {
   width: 35rem;
   border-radius: 5px;
-  
+
 }
-.about{
+
+.about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 25rem;
   color: black;
- 
+
 }
+<<<<<<< HEAD
+
+.about h1 {
+=======
 .about h1,.services h1{
+>>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
   font-size: 3rem;
   font-weight: bolder;
   color: black;
 }
+<<<<<<< HEAD
+
+.about-grid h3,
+.gallery>h3 {
+  font-weight: bolder;
+=======
 .about-grid h3,.gallery>h3,.services h3{
   font-weight:bolder;
+>>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
   /* text-decoration: underline; */
   color: black;
 }
-.about p{
+
+.about p {
   font-size: 1.2rem;
-  color: rgba(10, 10, 10,0.6);
+  color: rgba(10, 10, 10, 0.6);
 }
-.about h5{
+
+.about h5 {
   font-weight: bold;
 }
-.radious{
-  border: 1px solid rgba(8, 8, 8,0.2);
+
+.radious {
+  border: 1px solid rgba(8, 8, 8, 0.2);
   padding: 1rem;
   font-size: 5rem;
   border-radius: 50%;
 }
-.about-grid>div:first-of-type{
+
+.about-grid>div:first-of-type {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#hashTag{
+
+#hashTag {
   padding: 0.5rem 3rem;
   border-radius: 15rem;
-  background-color:white;
-  color: rgb(25, 25, 25,0.6);
+  background-color: white;
+  color: rgb(25, 25, 25, 0.6);
   font-weight: 600;
   font-size: 1.1rem;
   height: fit-content;
-  border: 1px solid rgba(12, 12, 12,0.3);
+  border: 1px solid rgba(12, 12, 12, 0.3);
   margin: 0.2rem 0.3rem;
 }
+
 .fa {
   padding: 10px;
   font-size: 50px;
@@ -209,6 +306,7 @@ justify-content: space-between;
   margin: 5px 1.2rem;
   border-radius: 50px 50px;
 }
+
 .fa-facebook {
   background: #3B5998;
   color: white;
@@ -218,21 +316,27 @@ justify-content: space-between;
   background: #55ACEE;
   color: white;
 }
+
 .fa-whatsapp {
-  background: rgb(1,148,123);
+  background: rgb(1, 148, 123);
   color: white;
 }
 
 .fa-telegram {
-  background: rgb(57,166,220);
+  background: rgb(57, 166, 220);
   color: white;
 }
-.gallery{
-  border-top:1px solid rgba(82, 81, 81,0.2);
+
+.gallery {
+  border-top: 1px solid rgba(82, 81, 81, 0.2);
   padding-top: 6rem;
 }
-.grid-btn{
+
+.grid-btn {
   margin-top: 1.7rem;
+<<<<<<< HEAD
+}
+=======
 }
 
 .image-grid>div>img{
@@ -395,3 +499,4 @@ h3{
 
 
 
+>>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
