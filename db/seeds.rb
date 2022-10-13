@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "seeding"
 
 puts "Seeding doctors"
 Doctor.create!([
@@ -27,7 +26,7 @@ User.create!([
 
   { username: "Aaran Kibs",
    nationality: "Korean",
-   date_of_birth: "21062000",
+   gender: "Male",
    address: "peetford",
    occupation: "teacher",
    allergies: "peanut",
@@ -36,16 +35,16 @@ User.create!([
 
   { username: "Aaren Yeager",
    nationality: "Japanese",
-   date_of_birth: "06021994",
+   gender: "Male",
    address: "langata",
    occupation: "engineer",
    allergies: "none",
    age: "28",
    password: "12345" },
 
-  { username: "Aaran Kibs",
+  { username: "Jay Rales",
    nationality: "Korean",
-   date_of_birth: "21062000",
+   gender: "Female",
    address: "monrovia lane",
    occupation: "teacher",
    allergies: "peanut",
@@ -54,7 +53,7 @@ User.create!([
 
   { username: "Hermadine Smith",
    nationality: "SouthAfrican",
-   date_of_birth: "01172001",
+   gender: "Male",
    address: "utawala",
    occupation: "data scientist",
    allergies: "kiwi",
@@ -63,7 +62,7 @@ User.create!([
 
   { username: "Melisa Lonte",
    nationality: "Kenyan",
-   date_of_birth: "21062000",
+   gender: "Female",
    address: "jamhuri",
    occupation: "teacher",
    allergies: "peanut",
@@ -71,4 +70,41 @@ User.create!([
    password: "12345678" },
 ])
 
+
+puts "Seeding Appointments"
+doctors = Doctor.all
+users = User.all
+confirmed_array = [true, false]
+doctors.each do |doctor|
+  u = users.sample
+  d = Date.today + 1.day
+  t = Time.new(d.year, d.month, d.day, 8)
+  doctor.appointments.create!(
+    user_id: u.id,
+    date: d,
+    time: t,
+    duration: 1,
+    confirmed: confirmed_array.sample,
+  )
+
+  u = users.sample
+  t = Time.new(d.year, d.month, d.day, 9)
+  doctor.appointments.create!(
+    user_id: u.id,
+    date: d,
+    time: t,
+    duration: 1,
+    confirmed: confirmed_array.sample,
+  )
+
+  u = users.sample
+  t = Time.new(d.year, d.month, d.day, 11)
+  doctor.appointments.create!(
+    user_id: u.id,
+    date: d,
+    time: t,
+    duration: 1,
+    confirmed: confirmed_array.sample,
+  )
+end
 puts "Done seeding"
