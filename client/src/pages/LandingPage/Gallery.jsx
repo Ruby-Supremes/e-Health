@@ -17,12 +17,12 @@ function Gallery() {
             <ButtonHashTag word={'Trust'}/>
         </div>
       </div>
-      {/* <div>
+      <div>
       <a href="sample" className="fa fa-telegram"></a>
         <a href="sample"  className="fa fa-twitter"></a>
         <a href="sample"  className="fa fa-facebook"></a>
         <a href="sample"  className="fa fa-whatsapp"></a>
-      </div> */}
+      </div>
     </div>
     <ImageGrid/>
     <div>
