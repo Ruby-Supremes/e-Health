@@ -135,14 +135,11 @@ li {
   color: white;
   opacity: 0.8;
 }
-<<<<<<< HEAD
 
 .facts,
 .about-grid,
-.gallery {
-=======
-.facts,.about-grid,.gallery,.services{
->>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
+.gallery,
+.services {
   display: grid;
   color: white;
   margin-top: 8rem;
@@ -240,25 +237,18 @@ li {
   color: black;
 
 }
-<<<<<<< HEAD
 
-.about h1 {
-=======
-.about h1,.services h1{
->>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
+.about h1,
+.services h1 {
   font-size: 3rem;
   font-weight: bolder;
   color: black;
 }
-<<<<<<< HEAD
 
 .about-grid h3,
-.gallery>h3 {
+.gallery>h3,
+.services h3 {
   font-weight: bolder;
-=======
-.about-grid h3,.gallery>h3,.services h3{
-  font-weight:bolder;
->>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
   /* text-decoration: underline; */
   color: black;
 }
@@ -334,12 +324,10 @@ li {
 
 .grid-btn {
   margin-top: 1.7rem;
-<<<<<<< HEAD
-}
-=======
 }
 
-.image-grid>div>img{
+
+.image-grid>div>img {
   max-width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -347,48 +335,52 @@ li {
   object-fit: cover;
   border-radius: 5px;
 }
-.image-grid > div{
+
+.image-grid>div {
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.image-grid{
+
+.image-grid {
   margin-top: 6rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-rows: 300px;
   grid-auto-flow: dense;
 }
 
-.image-grid .wide{
+.image-grid .wide {
   grid-row: span 2;
 }
-.image-grid .tall{
+
+.image-grid .tall {
   grid-column: span 2;
 }
-.image-grid .big{
+
+.image-grid .big {
   grid-row: span 2;
   grid-column: span 2;
 }
 
 
 /* JOB SIDNEY LOGIN FORMS */
-.image2{
+.image2 {
   background-image: url("https://healthsciences.uonbi.ac.ke/sites/default/files/2021-10/hospital-ward.jpg");
   height: 100vh;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  left: 0; 
+  left: 0;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 
 }
 
-.overlay{
+.overlay {
   position: fixed;
   overflow: auto;
   width: 100%;
@@ -398,22 +390,24 @@ li {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
-  
+
 }
-.heading{
+
+.heading {
   text-align: center;
   font-weight: bold;
   color: #ffff;
   font-size: 50px;
 
-  
-}
-form>div{
-  display: flex;
-  flex-direction: row;
+
 }
 
-.all{
+/* form>div {
+  display: flex;
+  flex-direction: row;
+} */
+
+.all {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -424,27 +418,32 @@ form>div{
   width: 400px;
   height: 50%;
 }
-form{
+
+/* form {
   display: grid;
   gap: 2rem;
   width: 400px;
-}
-label>.fa{
+} */
+
+label>.fa {
   font-size: 25px;
 
 }
-input{
+
+input {
   width: 100%;
   border-radius: 6px;
   padding: 1rem;
   font-weight: 500;
-  font-size:larger;
+  font-size: larger;
   border: none;
 }
-input:focus{
+
+input:focus {
   border: 4px solid #1344FE;
-  background-color:#dee4f7 ;
+  background-color: #dee4f7;
 }
+
 #logIn {
   width: 100%;
   padding: 15px;
@@ -457,9 +456,10 @@ input:focus{
   cursor: pointer;
   outline: none;
   text-align: center;
-  
+
 }
-#password{
+
+#password {
   text-align: center;
   color: #ffff;
   font-size: x-large;
@@ -467,36 +467,36 @@ input:focus{
 
 }
 
-.horizontal{
+.horizontal {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: #ffff;
 }
-hr{
+
+hr {
   width: 150px;
 }
-h3{
+
+h3 {
   padding: 0 7px 0 7px;
 }
 
-#account{
+#account {
   text-align: center;
   color: #ffff;
   font-size: 1.3rem;
 
 }
-#sign{
-  color:white;
+
+#sign {
+  color: white;
 }
-.horizontal h3{
+
+.horizontal h3 {
   font-size: 1.3rem;
 }
-.hor>hr{
- color: white;
+
+.hor>hr {
+  color: white;
 }
-
-
-
-
->>>>>>> c965b5bea93863e6ded4a80214e7a2870380cee0
