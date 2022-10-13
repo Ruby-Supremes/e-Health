@@ -4,6 +4,10 @@ class CreateAppointments < ActiveRecord::Migration[7.0]
       t.datetime :appointment_date
       t.integer :doctor_id
       t.integer :user_id
+      t.integer :date
+      t.integer :time
+      t.float :duration
+      t.boolean :confirmed
 
       t.timestamps
     end
