@@ -6,7 +6,8 @@ import Patients from "./pages/Patients";
 import Appointments from "./pages/Appointments";
 import Approvals from "./pages/Approvals";
 import PatientAppointment from "./pages/PatientAppointment"
-
+import Form from "./pages/Form"
+import Login from "./pages/Login"
 function App() {
   return (
     <BrowserRouter>
@@ -51,6 +52,7 @@ function App() {
         />
         <Route path="/booking" element={<PatientAppointment />} />
       </Routes>
+      {/* <Form dataa={<Login/>}/> */}
     </BrowserRouter>
   );
 
