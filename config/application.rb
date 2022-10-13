@@ -23,8 +23,11 @@ module EHealth
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Adding back cookies and session middleware
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+
+
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -39,5 +42,8 @@ module EHealth
     # Skip views, helpers and assets when generating a new resource.
     config.action_dispatch.cookies_same_site_protection = :strict
     config.api_only = true
+
+    # Use SameSite=Strict for all cookies to help protect against CSRF
+    config.action_dispatch.cookies_same_site_protection = :strict
   end
 end
