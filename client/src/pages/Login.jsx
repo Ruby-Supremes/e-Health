@@ -25,9 +25,9 @@ function handleChange(event) {
 function handleAction(){
   setAction(!action)
 }
-function handleDeleteClick({id}) {
+// function handleDeleteClick({id}) {
 
-}
+// }
 
 function handleSubmit(event){
     const item=data.find(item=>item.email===formData.email)
