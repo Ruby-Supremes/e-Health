@@ -1,6 +1,5 @@
 import React from 'react'
 import Gallery from './Gallery'
-import NavBar from './NavBar'
 import WholeAbouts from './WholeAbouts'
 import WholeIntro from './WholeIntro'
 
