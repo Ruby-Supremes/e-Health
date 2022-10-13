@@ -71,19 +71,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
     bcrypt (3.1.18)
-=======
-<<<<<<< HEAD
-    bcrypt (3.1.16)
-=======
-    bcrypt (3.1.18)
->>>>>>> 744ebfc708fe76bf6703d14dbbad08fa2d3295d4
->>>>>>> 2a9d6bc5a1804f9be93a79a4f3a1d59cc3eb122e
-=======
-    bcrypt (3.1.18)
->>>>>>> ab38a115c6c85e58cb9f8f646f45850f6dca8336
     builder (3.2.4)
     case_transform (0.2)
       activesupport
@@ -162,7 +150,7 @@ GEM
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 3.4)
-    sorbet-runtime (0.5.10484)
+    sorbet-runtime (0.5.10486)
     sqlite3 (1.5.3-x86_64-linux)
     syntax_tree (3.6.3)
       prettier_print
@@ -179,22 +167,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-<<<<<<< HEAD
-<<<<<<< HEAD
-  active_model_serializers (~> 0.10.12)
-  bcrypt (~> 3.1.7)
-=======
-<<<<<<< HEAD
-  bcrypt
-=======
-  active_model_serializers (~> 0.10.12)
-  bcrypt (~> 3.1.7)
->>>>>>> 744ebfc708fe76bf6703d14dbbad08fa2d3295d4
->>>>>>> 2a9d6bc5a1804f9be93a79a4f3a1d59cc3eb122e
-=======
   active_model_serializers (~> 0.10.12)
   bcrypt
->>>>>>> ab38a115c6c85e58cb9f8f646f45850f6dca8336
   debug
   puma (~> 5.0)
   rails (~> 7.0.4)
