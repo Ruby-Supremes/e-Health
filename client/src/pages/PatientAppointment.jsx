@@ -26,6 +26,8 @@ const PatientAppointment = () => {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
+    alert("Thank you submitting your response")
+
   }
 
   return (
