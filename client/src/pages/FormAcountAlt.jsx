@@ -10,7 +10,7 @@ const navigate=useNavigate();
 
 
     useEffect(()=>{
-        fetch('http://localhost:9292/users/logins')
+        fetch('')
         .then(res=>res.json())
         .then(data=>setUser(data))
       },[])
@@ -42,7 +42,7 @@ const navigate=useNavigate();
         <div className="hor"><hr/>
         </div>
     </div>
-    <h3 id="account">Don't have an account? <Link to="/signUp" id="sign">Sign up</Link></h3>
+    <h3 id="account">Don't have an account? <Link to="" id="sign">Sign up</Link></h3>
   </form>
   )
 }
