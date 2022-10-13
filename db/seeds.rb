@@ -23,7 +23,7 @@ Doctor.create!([
     {name: "Abraham Daves", specialization: "otolaryngology", experience: "7 Years", image: "https://media.istockphoto.com/photos/middle-eastern-nurse-wearing-face-mask-at-hospital-picture-id1307543588?k=20&m=1307543588&s=612x612&w=0&h=babdb1BrmsLJmo-4DAb5YrIe2tPFW5YWNOAB769Psh8=" }
 ])
 
-puts "seeding users"
+puts "seeding data"
 User.create!([
 
    { username: "Aaran Kibs",
