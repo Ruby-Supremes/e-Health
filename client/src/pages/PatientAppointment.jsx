@@ -12,12 +12,12 @@ const PatientAppointment = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    fetch("https://granite-aluminum-grasshopper.glitch.me/patients", {
+    fetch("/users", {
       method: "POST",
       body: JSON.stringify({
-        name: name,
+        username: name,
         address: address,
-        date: date,
+        date_of_birth: date,
         nationality: nationality,
         occupation: occupation,
         allergies: allergies,

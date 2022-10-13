@@ -7,7 +7,7 @@ const Appointments = ({ column }) => {
   const [patients, setPatients] = useState([]);
 
   useEffect(() => {
-    fetch("https://granite-aluminum-grasshopper.glitch.me/patients")
+    fetch("/users")
       .then((response) => response.json())
       .then((data) => setPatients(data));
   }, [patients]);
