@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 // import logo from './../../../public/images/logo.svg'
 function NavBar() {
     const navData=[
@@ -32,10 +32,10 @@ function NavBar() {
             path: "/contact"
         },
     ]
-    const linky=()=>{
-        navData.map(item=>{
-            return (<li className="navLink"><Link to={item.path} element={''}>{item.title}</Link></li>)})
-    }
+    // const linky=()=>{
+    //     navData.map(item=>{
+    //         return (<li className="navLink"><Link to={item.path} element={''}>{item.title}</Link></li>)})
+    // }
   return (
     <div className='Nav'>
       <div className="logo">
