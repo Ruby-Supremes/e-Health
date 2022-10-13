@@ -3,9 +3,9 @@ import { Link,useNavigate } from 'react-router-dom'
 function Login({onLog}) {
 
 const [formData,setData] = useState({})
-const[data,setUser]=useState('');
+const [user,setUser]= useState()
 const [action,setAction] = useState(true);
-const navigate=useNavigate();
+
 function handleChange(event) {
   const name=event.target.name;
   const value=event.target.value;
@@ -18,26 +18,21 @@ function handleChange(event) {
 function handleAction(){
   setAction(!action)
 }
-// function handleDeleteClick({id}) {
-
-// }
 
 function handleSubmit(event){
   event.preventDefault()
-  fetch("/login", {
+  fetch("http://localhost:3000/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(formData),
   }).then((r) => {
-    console.log(formData);
     if (r.ok) {
-      r.json().then((user) => onLog(user));
-    } else {
-      r.json().then((err) => alert(err.errors));
+      r.json().then((user) => setUser(user));
     }
   });
+  // alert(formData)
 }
 
   return (

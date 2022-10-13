@@ -13,8 +13,12 @@
 ActiveRecord::Schema[7.0].define(version: 2022_10_11_083309) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "appointment_date"
-    t.string "doctor_id"
-    t.string "user_id"
+    t.integer "doctor_id"
+    t.integer "user_id"
+    t.integer "date"
+    t.integer "time"
+    t.float "duration"
+    t.boolean "confirmed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
@@ -22,17 +26,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_083309) do
   end
 
   create_table "doctors", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "experience"
     t.string "specialization"
     t.string "image"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "date_of_birth"
+    t.string "gender"
     t.integer "age"
     t.string "address"
     t.string "nationality"

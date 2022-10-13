@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Button({word,classN}) {
+function Button({ word, classN, typeofbtn }) {
   return (
-    <button className={classN}>{word}</button>
-  )
+    <button type={typeofbtn} className={classN}>
+      {word}
+    </button>
+  );
 }
 
-export default Button
+export default Button;

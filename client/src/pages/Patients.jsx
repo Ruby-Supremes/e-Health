@@ -1,5 +1,3 @@
-// import Card from "../components/Card";
-
 import Button from "../components/Button";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -15,15 +13,12 @@ const Patients = ({ column }) => {
 
   return (
     <div className={`${column}`}>
-      {/* <Card
-        name={`${patients[0].name}`}
-        occupation={`${patients[0].occupation}`}
-      /> */}
+
       <table
         className="table table-striped"
         style={{
           fontSize: "1rem",
-          width: "95%",
+          // width: "95%",
           margin: "auto",
           backgroundColor: "#809BA6",
         }}
