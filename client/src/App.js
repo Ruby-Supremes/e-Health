@@ -30,6 +30,8 @@ function App() {
             </div>
           }
         />
+        <Route exact path="/Login" element={<Form dataa={<Login/>}/>}></Route>
+        <Route exact path="/SignUp" element={<Form dataa={<SignUp/>}/>}></Route>
         <Route
           path="/patients"
           element={
