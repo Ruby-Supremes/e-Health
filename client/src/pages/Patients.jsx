@@ -9,12 +9,12 @@ const Patients = ({ column }) => {
     fetch("/users")
       .then((response) => response.json())
       .then((data) => setPatients(data));
-  }, [patients]);
+  }, []);
 
   return (
     <div className={`${column}`}>
       <table
-        className="table table-striped"
+        className="table table-striped border1"
         style={{
           fontSize: "1rem",
           margin: "auto",
@@ -25,13 +25,12 @@ const Patients = ({ column }) => {
           <tr>
             <th>NO:</th>
             <th>Name</th>
-            <th>DOB</th>
             <th>Age</th>
             <th>Address</th>
             <th>Nationality</th>
             <th>Occupation</th>
+            <th>Gender</th>
             <th>Allergies</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -39,15 +38,12 @@ const Patients = ({ column }) => {
             <tr key={patient.id}>
               <td>{patient.id}</td>
               <td>{patient.username}</td>
-              <td>{patient.date_of_birth}</td>
               <td>{patient.age}</td>
               <td>{patient.address}</td>
               <td>{patient.nationality}</td>
               <td>{patient.occupation}</td>
+              <td>{patient.gender}</td>
               <td>{patient.allergies}</td>
-              <td>
-                <Button word="View Details" classN="btn btn-primary" />
-              </td>
             </tr>
           ))}
         </tbody>

@@ -12,14 +12,19 @@ const Appointments = ({ column }) => {
       .then((data) => setPatients(data));
   }, [patients]);
 
+  function handleDelete(id) {
+    fetch(`/users/${id}`, {
+      method: "DELETE",
+    });
+  }
+
   return (
     <div className={`${column}`}>
       <table
-        className="table table-striped"
+        className="table table-striped border1"
         style={{
           fontSize: "1rem",
-          width: "100%",
-          // margin: "auto",
+          margin: "auto",
           backgroundColor: "#809BA6",
         }}
       >
@@ -28,8 +33,7 @@ const Appointments = ({ column }) => {
             <th>NO:</th>
             <th>Name</th>
             <th>Age</th>
-            <th>DOB</th>
-            <th>Email</th>
+            <th>Address</th>
             <th>Nationality</th>
             <th>Occupation</th>
             <th>Gender</th>
@@ -38,13 +42,12 @@ const Appointments = ({ column }) => {
           </tr>
         </thead>
         <tbody>
-          {patients.map((patient) => (
+          {patients.map((patient, index) => (
             <tr key={patient.id}>
               <td>{patient.id}</td>
-              <td>{patient.name}</td>
+              <td>{patient.username}</td>
               <td>{patient.age}</td>
-              <td>{patient.DOB}</td>
-              <td>{patient.email}</td>
+              <td>{patient.address}</td>
               <td>{patient.nationality}</td>
               <td>{patient.occupation}</td>
               <td>{patient.gender}</td>
@@ -52,7 +55,11 @@ const Appointments = ({ column }) => {
                 <Button word="Approve" classN="btn btn-primary" />
               </td>
               <td>
-                <Button word="Deny" classN="btn btn-danger" />
+                <Button
+                  onClick={() => handleDelete(patient.id)}
+                  word="Deny"
+                  classN="btn btn-danger"
+                />
               </td>
             </tr>
           ))}

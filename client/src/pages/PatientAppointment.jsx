@@ -1,14 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import Button from "../components/Button";
+import Carousel from "../components/Carousel";
 
 const PatientAppointment = () => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
-  const [date, setDate] = useState("");
+  const [gender, setGender] = useState("");
   const [nationality, setNationality] = useState("");
   const [occupation, setOccupation] = useState("");
   const [allergies, setAllergies] = useState("");
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setGender(event.target.value);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,7 +23,8 @@ const PatientAppointment = () => {
       body: JSON.stringify({
         username: name,
         address: address,
-        date_of_birth: date,
+        gender: gender,
+        age: age,
         nationality: nationality,
         occupation: occupation,
         allergies: allergies,
@@ -26,8 +33,14 @@ const PatientAppointment = () => {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
-    alert("Thank you submitting your response")
-
+    alert("Thank you submitting your response");
+    setName("");
+    setAddress("");
+    setGender("");
+    setAge("");
+    setNationality("");
+    setOccupation("");
+    setAllergies("");
   }
 
   return (
@@ -35,7 +48,7 @@ const PatientAppointment = () => {
       <div className="d-flex patientForm">
         <div
           id="carouselExampleIndicators"
-          className="carousel slide col-8"
+          className="carousel slide col-6"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
@@ -61,29 +74,7 @@ const PatientAppointment = () => {
               aria-label="Slide 3"
             ></button>
           </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                className="img-fluid"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                className="img-fluid"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                className="img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
+          <Carousel />
           <button
             className="carousel-control-prev"
             type="button"
@@ -109,7 +100,7 @@ const PatientAppointment = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="col-6">
           <div className="row">
             <div className="form-group col-6">
               <label>Name</label>
@@ -144,6 +135,16 @@ const PatientAppointment = () => {
             />
           </div>
           <div className="form-group">
+            <label>Age</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter Age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
             <label>Nationality</label>
             <input
               type="text"
@@ -154,13 +155,16 @@ const PatientAppointment = () => {
             />
           </div>
           <div className="form-group">
-            <label>Date of Birth</label>
-            <input
-              type="date"
+            <label>Choose Gender</label>
+            <select
+              value={gender}
+              onChange={handleChange}
               className="form-control"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
+            >
+              <option value="">Choose Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
           <div className="form-group">
             <label for="allergy">Allergies:</label>
