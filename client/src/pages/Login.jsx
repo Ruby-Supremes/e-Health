@@ -1,17 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
-function Login() {
+function Login({onLog}) {
 
 const [formData,setData] = useState({})
-const[data,setUser]=useState('');
+const [user,setUser]= useState()
 const [action,setAction] = useState(true);
-const navigate=useNavigate();
-
-useEffect(()=>{
-  fetch('')
-  .then(res=>res.json())
-  .then(data=>setUser(data))
-},[])
 
 function handleChange(event) {
   const name=event.target.name;
@@ -25,30 +18,21 @@ function handleChange(event) {
 function handleAction(){
   setAction(!action)
 }
-// function handleDeleteClick({id}) {
-
-// }
 
 function handleSubmit(event){
-    const item=data.find(item=>item.email===formData.email)
-    if (item && item.password===formData.password){
-      if(action){
-        alert('Login Successfull !...')
-        event.target.reset()
-        navigate('/menu')
-      }
-      else{
-        fetch(`http://localhost:9292/users/${item.id}`, {
-          method: "DELETE",
-        })
-      alert(`User Account Deleted succesfully`)
-      event.target.reset()
-      navigate('/')
-      }
-    }else{
-      event.preventDefault();
-      alert('Login Failure! Wrong email or password!')
-    };
+  event.preventDefault()
+  fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  }).then((r) => {
+    if (r.ok) {
+      r.json().then((user) => setUser(user));
+    }
+  });
+  // alert(formData)
 }
 
   return (
@@ -58,7 +42,7 @@ function handleSubmit(event){
         
         <h2 className="heading">Medwin Care</h2>
         
-            <input type="email" name="email" id="username-field" className="login-button" placeholder="Email" onChange={handleChange} required></input>
+            <input type="text" name="username" id="username-field" className="login-button" placeholder="username" onChange={handleChange} required></input>
             <input type="password" name="password" id="password-field" className="login-button" placeholder="Password" onChange={handleChange} required></input>
         
         <button type='submit' classNameName='log' id='logIn'>{action?'Login' :'Delete'}</button>
