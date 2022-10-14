@@ -15,7 +15,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_083309) do
     t.datetime "appointment_date"
     t.integer "doctor_id"
     t.integer "user_id"
-    t.integer "date"
     t.integer "time"
     t.float "duration"
     t.boolean "confirmed"

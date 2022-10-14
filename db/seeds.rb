@@ -75,7 +75,7 @@ doctors.each do |doctor|
   t = Time.new(d.year, d.month, d.day, 8)
   doctor.appointments.create!(
     user_id: u.id,
-    date: d,
+    appointment_date: d,
     time: t,
     duration: 1,
     confirmed: confirmed_array.sample,
@@ -85,7 +85,7 @@ doctors.each do |doctor|
   t = Time.new(d.year, d.month, d.day, 9)
   doctor.appointments.create!(
     user_id: u.id,
-    date: d,
+    appointment_date: d,
     time: t,
     duration: 1,
     confirmed: confirmed_array.sample,
@@ -95,7 +95,7 @@ doctors.each do |doctor|
   t = Time.new(d.year, d.month, d.day, 11)
   doctor.appointments.create!(
     user_id: u.id,
-    date: d,
+    appointment_date: d,
     time: t,
     duration: 1,
     confirmed: confirmed_array.sample,
