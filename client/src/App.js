@@ -9,6 +9,7 @@ import PatientAppointment from "./pages/PatientAppointment"
 import Form from "./pages/Form"
 import Login from "./pages/Login"
 import React,{useState} from "react";
+import SignUp from "./pages/SignUp";
 function App() {
   const [user,setUser] = useState()
   function onLogin(data){
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* <Routes>
+      <Routes>
         <Route exact path="/" element={<LandingPage />}></Route>
         <Route
           exact
@@ -57,8 +58,8 @@ function App() {
           }
         />
         <Route path="/booking" element={<PatientAppointment />} />
-      </Routes> */}
-      <Form dataa={<Login onLog={onLogin}/>}/>
+      </Routes> 
+      
     </BrowserRouter>
   );
 
