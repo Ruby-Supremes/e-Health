@@ -1,23 +1,30 @@
 import React from "react";
 import { useState } from "react";
 import Button from "../components/Button";
+import Carousel from "../components/Carousel";
 
 const PatientAppointment = () => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
-  const [date, setDate] = useState("");
+  const [gender, setGender] = useState("");
   const [nationality, setNationality] = useState("");
   const [occupation, setOccupation] = useState("");
   const [allergies, setAllergies] = useState("");
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setGender(event.target.value);
+  };
 
   function handleSubmit(e) {
-    e.preventDefault()
-    fetch("https://granite-aluminum-grasshopper.glitch.me/patients", {
+    e.preventDefault();
+    fetch("/users", {
       method: "POST",
       body: JSON.stringify({
-        name: name,
+        username: name,
         address: address,
-        date: date,
+        gender: gender,
+        age: age,
         nationality: nationality,
         occupation: occupation,
         allergies: allergies,
@@ -26,18 +33,74 @@ const PatientAppointment = () => {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
+    alert("Thank you submitting your response");
+    setName("");
+    setAddress("");
+    setGender("");
+    setAge("");
+    setNationality("");
+    setOccupation("");
+    setAllergies("");
   }
 
   return (
     <div className="d-flex fillingForm">
       <div className="d-flex patientForm">
-        <img
-          className="img-fluid"
-          src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
-          alt="A Doctor"
-          style={{ width: "450px", borderRadius: "7px" }}
-        />
-        <form onSubmit={handleSubmit}>
+        <div
+          id="carouselExampleIndicators"
+          className="carousel slide col-6"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              className="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              className="bg-primary"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <Carousel />
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+        <form onSubmit={handleSubmit} className="col-6">
           <div className="row">
             <div className="form-group col-6">
               <label>Name</label>
@@ -72,6 +135,16 @@ const PatientAppointment = () => {
             />
           </div>
           <div className="form-group">
+            <label>Age</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter Age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
             <label>Nationality</label>
             <input
               type="text"
@@ -82,18 +155,21 @@ const PatientAppointment = () => {
             />
           </div>
           <div className="form-group">
-            <label>Date of Birth</label>
-            <input
-              type="date"
+            <label>Choose Gender</label>
+            <select
+              value={gender}
+              onChange={handleChange}
               className="form-control"
-              value={date}
-              onChange={e => setDate(e.target.value)}
-            />
+            >
+              <option value="">Choose Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="allergy">Allergies:</label>
             <textarea
-              class="form-control"
+              className="form-control"
               rows="1"
               id="allergy"
               value={allergies}

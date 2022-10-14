@@ -46,7 +46,7 @@ function App() {
           element={
             <div className="d-flex">
               <Navbar column="col-2" />
-              <Appointments column="col-2" />
+              <Appointments column="col-10" />
             </div>
           }
         />

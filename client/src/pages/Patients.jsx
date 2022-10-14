@@ -6,19 +6,17 @@ const Patients = ({ column }) => {
   const [patients, setPatients] = useState([]);
 
   useEffect(() => {
-    fetch("https://granite-aluminum-grasshopper.glitch.me/patients")
+    fetch("/users")
       .then((response) => response.json())
       .then((data) => setPatients(data));
-  }, [patients]);
+  }, []);
 
   return (
     <div className={`${column}`}>
-
       <table
-        className="table table-striped"
+        className="table table-striped border1"
         style={{
           fontSize: "1rem",
-          // width: "95%",
           margin: "auto",
           backgroundColor: "#809BA6",
         }}
@@ -27,27 +25,25 @@ const Patients = ({ column }) => {
           <tr>
             <th>NO:</th>
             <th>Name</th>
+            <th>Age</th>
             <th>Address</th>
-            <th>DOB</th>
             <th>Nationality</th>
             <th>Occupation</th>
+            <th>Gender</th>
             <th>Allergies</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
           {patients.map((patient) => (
             <tr key={patient.id}>
               <td>{patient.id}</td>
-              <td>{patient.name}</td>
+              <td>{patient.username}</td>
+              <td>{patient.age}</td>
               <td>{patient.address}</td>
-              <td>{patient.DOB}</td>
               <td>{patient.nationality}</td>
               <td>{patient.occupation}</td>
+              <td>{patient.gender}</td>
               <td>{patient.allergies}</td>
-              <td>
-                <Button word="View Details" classN="btn btn-primary" />
-              </td>
             </tr>
           ))}
         </tbody>
