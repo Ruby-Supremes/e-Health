@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  def Create
+  def create
     doctor = Doctor.find_by(username: params[:username])
     if doctor&.authenticate(params[:password])
         session[:doctor_id] = doctor.id
@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       render json: { error: "Invalid username or password" }, status: :unauthorized
   end
 end
+
 
   def destroy
     session.delete :user_id

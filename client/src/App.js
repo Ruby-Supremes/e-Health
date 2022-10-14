@@ -8,7 +8,14 @@ import Approvals from "./pages/Approvals";
 import PatientAppointment from "./pages/PatientAppointment"
 import Form from "./pages/Form"
 import Login from "./pages/Login"
+import React,{useState} from "react";
+import SignUp from "./pages/SignUp";
 function App() {
+  const [user,setUser] = useState()
+  function onLogin(data){
+    setUser(data)
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -23,6 +30,8 @@ function App() {
             </div>
           }
         />
+        <Route exact path="/Login" element={<Form dataa={<Login/>}/>}></Route>
+        <Route exact path="/SignUp" element={<Form dataa={<SignUp/>}/>}></Route>
         <Route
           path="/patients"
           element={
@@ -51,8 +60,8 @@ function App() {
           }
         />
         <Route path="/booking" element={<PatientAppointment />} />
-      </Routes>
-      {/* <Form dataa={<Login/>}/> */}
+      </Routes> 
+      
     </BrowserRouter>
   );
 
