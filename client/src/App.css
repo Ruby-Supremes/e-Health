@@ -157,6 +157,13 @@ li {
   flex-direction: row;
   justify-content: space-between;
 }
+.book{
+  color:black;
+  text-decoration:none
+}
+.book:hover{
+  color:white
+}
 
 .appoint-btn>.btn {
   padding: 0.8rem 3rem;
