@@ -14,11 +14,11 @@ body {
 }
 
 form>* {
-  margin-bottom: 1.3rem;
+  margin-bottom: 0rem;
 }
 
 form {
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 
@@ -43,7 +43,7 @@ li {
 }
 
 .border1 {
-  border: 2px solid red;
+  border: 2px solid #fff;
 }
 
 .topNavbar {
@@ -156,6 +156,13 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.book{
+  color:black;
+  text-decoration:none
+}
+.book:hover{
+  color:white
 }
 
 .appoint-btn>.btn {
@@ -485,10 +492,10 @@ h3{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  /* margin: 0.5rem 3rem; */
+  margin: 0.5rem 3rem;
   border-bottom: 1px solid black;
   padding: 1rem 0.2rem;
-  font-size: large;
+  font-size: larger;
 }
 
 /* JOB SIDNEY LOGIN FORMS */
@@ -529,7 +536,12 @@ form>div{
   display: flex;
   flex-direction: row;
 }
-
+.radious2{
+  border: 1px solid rgba(8, 8, 8,0.2);
+  padding: 0.7rem;
+  font-size: 4rem;
+  border-radius: 50%;
+}
 .all{
   position: absolute;
   top: 50%;

@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
 
     def update
         appointment = Appointment.update(appointment_params)
-        render json: appointment, stautus: :ok
+        render json: appointment, status: :ok
     end
 
     def destroy
@@ -32,6 +32,6 @@ class AppointmentsController < ApplicationController
     end
 
     def appointment_params
-        params.permit(:appointment_date, :doctor_id, :patient_id)
+        params.permit(:appointment_date, :doctor_id, :user_id, :time, :duration)
     end
 end

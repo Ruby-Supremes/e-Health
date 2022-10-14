@@ -19,33 +19,35 @@ useEffect(()=>{
     })
   }
 
-  function handleSubmit(event) {
-    if (data.find(item=>item.email===formData.email)){
-      alert('This user Alredy Exist!');
-      event.preventDefault();
-    }
-    else{     
-     fetch("", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })   
-    event.target.reset()
-    navigate('/login')
+
+    function handleSubmit(event){
+      event.preventDefault()
+       fetch("/doctors", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((user) => {
+            setUser(user)
+            // console.log(user);
+          });
+        }
+      });
     }
 
-  }
 
 
   return (
     <form action="" onSubmit={handleSubmit}>
         <h2 className="heading">Medwin Care</h2> 
-        <input type="text" name="full_Name" id="username-field" className="login-button" placeholder="Full_Name" onChange={handleChange} required></input>        
-        <input type="email" name="email" id="usermail-field" className="login-button" placeholder="Email" onChange={handleChange} required></input> 
-        <input type="password" name="password" id="password-field" className="login-button" placeholder="Set Password" onChange={handleChange} required></input> 
-        <input type="password" name="password_Confirming" id="password-field2" className="login-button" placeholder="Confirm Password" onChange={handleChange} required></input> 
+        <input type="text" name="username" id="username-field" className="login-button" placeholder="username" onChange={handleChange} required></input>        
+        <input type="text" name="experience" className="login-button" placeholder="experience" onChange={handleChange} required></input> 
+        <input type="text" name="specialization"  className="login-button" placeholder="specialization" onChange={handleChange} required></input> 
+        <input type="text" name="image" className="login-button" placeholder="image" onChange={handleChange} required></input> 
+        <input type="password" name="password"  className="login-button" placeholder="password" onChange={handleChange} required></input> 
         <button type='submit' className='log' id='logIn'>Sign Up</button>
     </form>
   )

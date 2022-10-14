@@ -12,8 +12,13 @@ class DoctorsController < ApplicationController
 
     def create
         doctor = Doctor.create!(doctor_params)
-        render json: doctor, status: :created
+        if doctor.valid?
+            session[:doctor_id] = doctor.id
+            render json: doctor, status: :created
+        else
+            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
+end
 
     def destroy
         doctor = find_doctor
@@ -27,7 +32,7 @@ class DoctorsController < ApplicationController
  end
 
  def doctor_params
-    params.permit(:name, :specialization, :image, :experience)
+    params.permit(:username, :specialization, :image, :experience, :password)
  end
 
   def render_record_not_found_response

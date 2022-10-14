@@ -150,7 +150,7 @@ GEM
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 3.4)
-    sorbet-runtime (0.5.10486)
+    sorbet-runtime (0.5.10484)
     sqlite3 (1.5.3-x86_64-linux)
     syntax_tree (3.6.3)
       prettier_print
@@ -168,7 +168,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.12)
-  bcrypt
+  bcrypt (~> 3.1.7)
   debug
   puma (~> 5.0)
   rails (~> 7.0.4)

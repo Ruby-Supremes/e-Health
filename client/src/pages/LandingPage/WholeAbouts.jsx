@@ -19,7 +19,7 @@ function WholeAbouts() {
       <div>
         <img src="https://st.depositphotos.com/1006832/4057/i/450/depositphotos_40571515-stock-photo-interior-of-modern-building.jpg" alt="" />
         <ol className='equipment-grid'>
-            <li>Hello</li>
+            
         </ol>
       </div>
 
