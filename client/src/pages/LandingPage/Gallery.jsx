@@ -40,19 +40,11 @@ function Gallery() {
         </div>
       </div>
       <ImageGrid />
-      <div>
-        <div className="services">
-          <h3>Services</h3>
-          <h1>Excelent services of our clinic</h1>
-        </div>
-        <ul></ul>
-      </div>
-      <ImageGrid/>
 
     <div>
         <div className="services">
             <h3>Services</h3>
-            <h1>Excelent services of our clinic</h1>
+            
             
 
         </div>
