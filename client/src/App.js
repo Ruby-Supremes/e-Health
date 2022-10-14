@@ -8,7 +8,14 @@ import Approvals from "./pages/Approvals";
 import PatientAppointment from "./pages/PatientAppointment"
 import Form from "./pages/Form"
 import Login from "./pages/Login"
+import React,{useState} from "react";
+import SignUp from "./pages/SignUp";
 function App() {
+  const [user,setUser] = useState()
+  function onLogin(data){
+    setUser(data)
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -51,8 +58,8 @@ function App() {
           }
         />
         <Route path="/booking" element={<PatientAppointment />} />
-      </Routes>
-      {/* <Form dataa={<Login/>}/> */}
+      </Routes> 
+      
     </BrowserRouter>
   );
 
