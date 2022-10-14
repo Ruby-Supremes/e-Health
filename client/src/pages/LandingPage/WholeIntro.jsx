@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar'
-
+import { Link,useNavigate } from 'react-router-dom'
 function WholeIntro() {
   return (
     <>
@@ -21,7 +21,7 @@ function WholeIntro() {
             <h3>Take the sicount for the visit of a doctor</h3>
             <div className="appoint-btn">
               <span>20%</span>
-              <button className='btn'>Make an appointment</button>
+              <button className='btn'><Link className="book" to="/booking">Make an appointment</Link></button>
             </div>
           </div>
         </div>
