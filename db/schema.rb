@@ -13,8 +13,8 @@
 ActiveRecord::Schema[7.0].define(version: 2022_10_11_083309) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "appointment_date"
-    t.integer "doctor_id"
-    t.integer "user_id"
+    t.string "doctor_id"
+    t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
