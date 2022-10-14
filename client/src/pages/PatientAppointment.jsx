@@ -18,7 +18,7 @@ const PatientAppointment = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/users", {
+    fetch("http://localhost:3000/users", {
       method: "POST",
       body: JSON.stringify({
         username: name,

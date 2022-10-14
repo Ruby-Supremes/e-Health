@@ -7,7 +7,7 @@ const Appointments = ({ column }) => {
   const [patients, setPatients] = useState([]);
 
   useEffect(() => {
-    fetch("/users")
+    fetch("http://localhost:3000/users")
       .then((response) => response.json())
       .then((data) => setPatients(data));
   }, [patients]);
